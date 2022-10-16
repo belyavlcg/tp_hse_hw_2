@@ -17,6 +17,6 @@ jobs:
             python-version: 3.9
         - name: testing
           run: |
-            python Test_speed_3.py
+            python tp_2/Test_speed_3.py
             python Test_functions.py
             python Test_exception.py
