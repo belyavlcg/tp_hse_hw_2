@@ -9,7 +9,7 @@ class Test_Speed(unittest.TestCase):
         start_time = int(round(time.time() * 1000))
         _sum(test_base)
         stop_time = int(round(time.time() * 1000))
-        self.assertLess(stop_time - start_time, 5)
+        self.assertLess(stop_time - start_time, 6)
         print(stop_time - start_time)
 
     def test_mult_speed_2(self):
@@ -17,7 +17,7 @@ class Test_Speed(unittest.TestCase):
         start_time = int(round(time.time() * 1000))
         _sum(test_base)
         stop_time = int(round(time.time() * 1000))
-        self.assertLess(stop_time - start_time, 50)
+        self.assertLess(stop_time - start_time, 55)
 
         
 if __name__ == '__main__':
