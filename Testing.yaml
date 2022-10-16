@@ -1,1 +1,22 @@
-
+name: CICD
+on:
+  workflow_dispatch:
+  push:
+    branches: "main"
+  pull_request:
+    branches: "main"
+jobs:
+  testing:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout perository
+          uses: actions/checkout@v2
+        - name: setup python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.9
+        - name: tests
+          run: |
+            python Test_fuctions.py
+            python Test_speed_3.py
+            python Test_exception.py
